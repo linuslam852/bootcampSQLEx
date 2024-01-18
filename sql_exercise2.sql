@@ -43,7 +43,7 @@ INSERT INTO bonus
 
 # Task 2: Write an SQL query to show the second highest salary among all workers.
 SELECT IFNULL(
-	(SELECT salary
+	(SELECT DISTINCT salary
 	FROM worker
     ORDER BY salary DESC
     LIMIT 1,1), NULL) AS second_highest_sal;
